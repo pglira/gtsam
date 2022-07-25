@@ -50,7 +50,7 @@ class GTSAM_EXPORT HybridDiscreteFactor : public HybridFactor {
   /// @}
   /// @name Testable
   /// @{
-  virtual bool equals(const HybridFactor &lf, double tol) const override;
+  virtual bool equals(const HybridFactor &lf, double tol) const;
 
   void print(
       const std::string &s = "HybridFactor\n",

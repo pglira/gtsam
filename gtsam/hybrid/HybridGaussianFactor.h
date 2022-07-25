@@ -48,7 +48,7 @@ class GTSAM_EXPORT HybridGaussianFactor : public HybridFactor {
   /// @{
 
   /// Check equality.
-  virtual bool equals(const HybridFactor &lf, double tol) const override;
+  virtual bool equals(const HybridFactor &lf, double tol) const;
 
   /// GTSAM print utility.
   void print(
