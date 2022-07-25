@@ -18,9 +18,9 @@
 
 #pragma once
 
-#include <gtsam/discrete/DiscreteValues.h>
-#include <gtsam/inference/Factor.h>
 #include <gtsam/base/Testable.h>
+#include <gtsam/discrete/DiscreteValues.h>
+#include <gtsam/hybrid/HybridFactor.h>
 
 #include <string>
 namespace gtsam {
@@ -32,14 +32,14 @@ class DiscreteConditional;
  * Base class for discrete probabilistic factors
  * The most general one is the derived DecisionTreeFactor
  */
-class GTSAM_EXPORT DiscreteFactor: public Factor {
+class GTSAM_EXPORT DiscreteFactor: public HybridFactor {
 
 public:
 
   // typedefs needed to play nice with gtsam
   typedef DiscreteFactor This; ///< This class
   typedef boost::shared_ptr<DiscreteFactor> shared_ptr; ///< shared_ptr to this class
-  typedef Factor Base; ///< Our base class
+  typedef HybridFactor Base; ///< Our base class
 
   using Values = DiscreteValues; ///< backwards compatibility
 
